@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace ProjetoNautico_
 {
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
+    internal class Program{
+        static void Main(string[] args){
 
-            while (true)
-            {
+            while (true){
+                
+                List<string> lista_equipamentos = new List<string>();
 
                 Console.Clear();
                 Console.WriteLine("1. Novo Equipamento ");
@@ -22,12 +21,12 @@ namespace ProjetoNautico_
                 int menu = int.Parse(Console.ReadLine());
                 if (menu == 0) break;
 
-                //switch (menu)
-                //{
-                //    case 1:
-                //        NovoCarro(lista_carros);
-                //        break;
-                //    case 2:
+                switch (menu){
+
+                    case 1:
+                        NovoEquipamento(lista_equipamentos);
+                        break;
+                //case 2:
                 //        MostrarCarros(lista_carros);
                 //        break;
                 //    case 3:
@@ -36,32 +35,31 @@ namespace ProjetoNautico_
                 //    default:
                 //        Console.WriteLine("Opção inválida.");
                 //        break;
-                //}
+                }
                 Console.ReadKey();
             }
+        }
+            private static void NovoEquipamento(List<string> lista_equipamentos){
 
-            static void NovoEquipamento(List<String> lista_equipamentos){
+            int[] codigos = new int[10];
+            string[] nomes = new string[10];
+            string[] marcas = new string[10];
+            string[] modelos = new string[10];
 
-                int[] codigos = new int[10];
-                string[] nomes = new string[10];
-                string[] marcas = new string[10];
-                string[] modelos = new string[10];
+            int quantidade = 0;
 
-                int quantidade = 0;
+            Console.Write("Digite o Código do Equipamento: ");
+            codigos[quantidade] = int.Parse(Console.ReadLine());
 
-                Console.Write("Digite o Código do Equipamento: ");
-                codigos[quantidade] = int.Parse(Console.ReadLine());
+            Console.Write("Digite o Nome do Equipamento: ");
+            nomes[quantidade] = Console.ReadLine();
 
-                Console.Write("Digite o Nome do Equipamento: ");
-                nomes[quantidade] = Console.ReadLine();
+            Console.Write("Digite a Marca do Equipamento: ");
+            marcas[quantidade] = Console.ReadLine();
 
-                Console.Write("Digite a Marca do Equipamento: ");
-                marcas[quantidade] = Console.ReadLine();
+            Console.Write("Digite o Modelo do Equipamento: ");
+            modelos[quantidade] = Console.ReadLine();
 
-                Console.Write("Digite o Modelo do Equipamento: ");
-                modelos[quantidade] = Console.ReadLine();
-
-                quantidade++;
-            }
+            quantidade++;
+        }
     }
-}
