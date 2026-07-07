@@ -126,9 +126,10 @@ namespace ProjetoNautico_
         {
             Console.WriteLine("\n--- REABASTECIMENTO DE SUPERFÍCIE (Novo Item) ---\n");
 
-            int codigo;
+            int codigo = 0;
+            
             Console.Write("Digite o Código do Equipamento: ");
-            while (!int.TryParse(Console.ReadLine(), out codigo))
+            while (!int.TryParse(Console.ReadLine(), out codigo) || codigos.Contains(codigo))
             {
                 EscreverErro("Código inválido. Digite apenas números:");
                 Console.Write("Digite o Código do Equipamento: ");
