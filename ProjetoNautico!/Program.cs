@@ -5,10 +5,7 @@ namespace ProjetoNautico_
 {
     internal class Program
     {
-        // Integrante 1 - [Gabriel de Souza Pereira ] - Módulo de Controlo de Equipamento e Inventário Marinho
-        // Integrante 2 - [NOME COMPLETO] - Módulo de Requisições para Expedição
-        // Integrante 3 - [NOME COMPLETO] - Módulo de Custos Atmosféricos e Relatórios Operacionais
-
+        
         static void Main(string[] args)
         {
             List<int> codigos = new List<int>();
